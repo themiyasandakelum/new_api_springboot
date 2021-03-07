@@ -1,0 +1,39 @@
+
+
+<h2>Employee list </h2>
+<table class ="table table-strped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>username</th>
+            <th>nic</th>
+            <th>email</th>
+            <th>accno</th>
+            <th>Action</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor = "let user of user">
+            <td>
+               {{user.id}}
+            </td>
+            <td>
+                {{user.name}}
+             </td>
+            <td>
+                {{user.nic}}
+             </td>
+             <td>
+                {{user.email}}
+             </td>
+             <td>
+                {{user.accno}}
+             </td>
+             <td>
+                <button [routerLink]="['/updateuser']" click = "updateUsers(user.id)"class="btn btn-info">Update</button>  
+                <button [routerLink]="['/user-list']"  click = "deleteUser(user.id)"class="btn btn-danger" style =margin-left:10px>Delete</button>  
+              </td>
+        </tr>
+    </tbody>
+</table>

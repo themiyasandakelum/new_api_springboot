@@ -1,0 +1,72 @@
+<p>welcome new user</p>
+<div class="row">
+  <div class="col-md-4">
+    <h1>Sign up</h1>
+    <hr>
+    <br>
+    <form (ngSubmit)="onSubmit()" ngNativeValidate>
+      <div class="form-group">
+        <label for="name">Full name</label>
+        <input
+          [(ngModel)]="user.name"
+          name="name"
+          type="name"
+          required
+          class="form-control"
+          id="name"
+          placeholder="enter a name">
+      </div>
+      <div class="form-group">
+        <label for="nic">Id Number</label>
+        <input
+          [(ngModel)]="user.nic"
+          name="nic"
+          type="nic"
+          required
+          class="form-control"
+          id="nic"
+          placeholder="enter a Id number">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          [(ngModel)]="user.email"
+          name="email"
+          type="email"
+          required
+          class="form-control"
+          id="email"
+          placeholder="enter your email">
+      </div>
+      <div class="form-group">
+        <label for="accno">ACC Number</label>
+        <input
+          [(ngModel)]="user.accno"
+          name="accno"
+          type="accno"
+          required
+          class="form-control"
+          id="accno"
+          placeholder="enter a Acc Number">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          [(ngModel)]="user.password"
+          name="password"
+          type="password"
+          required
+          class="form-control"
+          id="password"
+          placeholder="enter a password">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <a [routerLink]="['/']" class="btn btn-success">Cancel</a>
+    </form>
+    <p>
+      <span>Already have an account?&nbsp;</span>
+      <a [routerLink]="['/log-in']">Log in!</a>
+    </p>
+  </div>
+</div>

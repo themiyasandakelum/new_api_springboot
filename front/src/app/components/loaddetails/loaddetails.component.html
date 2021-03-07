@@ -1,0 +1,32 @@
+<p>Welcom</p>
+
+
+<h2>Employee list </h2>
+<table class ="table table-strped">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>Type Of Loan </th>
+        
+            <th>Action</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+       <tr *ngFor = "let loan of loan">
+            <td>
+               {{loan.id}}
+            </td>
+            <td>
+                {{loan.typeofloan}}
+             </td>
+            <td>
+                {{loan.dec}}
+             </td>
+            <td>
+                <button [routerLink]="['/updateuser']" click = "updateUsers(user.id)"class="btn btn-info">Update</button>  
+               
+              </td>
+        </tr>
+    </tbody>
+</table>
